@@ -481,59 +481,115 @@
           <!-- Третий контейнер -->
           <div class="join">
             <b class="join-text">Подпишитесь на рассылку</b>
-            <a href="" class="button button-icon"
-              >Подписаться
-              <svg class="icon-plane">
-                <use href="./images/sprite.svg#icon-plane"></use>
-              </svg>
-            </a>
+            <div class="conteiner-form">
+              <form>
+                <label class="footer-form" for="email"></label>
+                <input
+                  class="placeholder"
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="E-mail"
+                />
+              </form>
+              <button class="button button-icon">
+                Подписаться
+                <svg class="icon-plane">
+                  <use href="./images/sprite.svg#icon-plane"></use>
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
         <!-- Копирайт
           <p class="copy">2020 | Developed by GoIT Students</p>is-hidden -->
       </div>
-      <div class="backdrop">
+      <!-- Modal window -->
+      <div class="backdrop is-hidden">
         <div class="modal">
+          <button class="close-modal" type="button">
+            <svg class="icon-close-modal">
+              <use href="./images/sprite-modal.svg#icon-close-modal"></use>
+            </svg>
+          </button>
           <form class="form">
-            <button type="button">x</button>
             <div class="form-field">
               <h2 class="form-title">
                 Оставьте свои данные, мы вам перезвоним
               </h2>
-              <label for="name">Имя</label>
-              <input type="text" name="name" id="name" placeholder="Имя" />
+              <label class="label-form" for="name">Имя</label>
+              <input
+                required
+                class="placeholder"
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Имя"
+              />
             </div>
             <div class="form-field">
-              <label for="phone">Телефон</label>
-              <input type="tel" name="phone" id="phone" placeholder="Телефон" />
+              <label class="label-form" for="phone">Телефон</label>
+              <input
+                required
+                class="placeholder"
+                type="tel"
+                name="phone"
+                id="phone"
+                placeholder="Телефон"
+              />
             </div>
             <div class="form-field">
-              <label for="email">Почта</label>
-              <input type="email" name="email" id="email" placeholder="Почта" />
+              <label class="label-form" for="email">Почта</label>
+              <input
+                required
+                class="placeholder"
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Почта"
+              />
             </div>
             <div class="form-field">
               <textarea
+                class="textarea placeholder"
                 name="comment"
                 id="comment"
                 placeholder="Комментарий"
-                rows="10"
               ></textarea>
             </div>
-            <input
-              type="checkbox"
-              name="terms-of-use"
-              value="terms-of-use"
-              id="terms-of-use"
-            />
-            <label for="terms-of-use"
-              >Соглашаюсь с рассылкой и принимаю
-              <a href="">Условия договора</a></label
-            >
-
-            <button type="submit">Отправить</button>
+            <div class="conteiner-checkbox">
+              <input
+                required
+                type="checkbox"
+                name="terms-of-use"
+                value="terms-of-use"
+                id="terms-of-use"
+              />
+              <label class="terms-of-use" for="terms-of-use"
+                >Соглашаюсь с рассылкой и принимаю
+                <a
+                  class="terms-of-use link-use"
+                  href=""
+                  aria-label="Условия договора "
+                  >Условия договора</a
+                ></label
+              >
+            </div>
+            <div class="conteiner-submit">
+              <button class="submit" type="submit">
+                Отправить
+              </button>
+            </div>
           </form>
         </div>
       </div>
     </footer>
+    <script>
+      const { height: pageHeaderHeight } = document
+        .querySelector('.page-header')
+        .getBoundingClientRect();
+
+      document.body.style.paddingTop = `${pageHeaderHeight}px`;
+    </script>
   </body>
 </html>
