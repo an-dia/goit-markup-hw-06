@@ -57,7 +57,7 @@
           <h1 class="hero-title">
             Эффективные решения для вашего бизнеса
           </h1>
-          <a href="" class="button">Заказать услугу</a>
+          <button data-modal-open class="button">Заказать услугу</button>
         </div>
       </section>
       <!--Приоритет-->
@@ -482,10 +482,10 @@
           <div class="join">
             <b class="join-text">Подпишитесь на рассылку</b>
             <div class="conteiner-form">
-              <form>
+              <form class="form-footer">
                 <label class="footer-form" for="email"></label>
                 <input
-                  class="placeholder"
+                  class="placeholder-footer"
                   type="email"
                   name="email"
                   id="email"
@@ -505,9 +505,9 @@
           <p class="copy">2020 | Developed by GoIT Students</p>is-hidden -->
       </div>
       <!-- Modal window -->
-      <div class="backdrop is-hidden">
+      <div class="backdrop is-hidden" data-modal>
         <div class="modal">
-          <button class="close-modal" type="button">
+          <button data-modal-close class="close-modal" type="button">
             <svg class="icon-close-modal">
               <use href="./images/sprite-modal.svg#icon-close-modal"></use>
             </svg>
@@ -591,5 +591,6 @@
 
       document.body.style.paddingTop = `${pageHeaderHeight}px`;
     </script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
