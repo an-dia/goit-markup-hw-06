@@ -57,7 +57,7 @@
           <h1 class="hero-title">
             Эффективные решения для вашего бизнеса
           </h1>
-          <button data-modal-open class="button">Заказать услугу</button>
+          <button data-modal-open class="submit">Заказать услугу</button>
         </div>
       </section>
       <!--Приоритет-->
@@ -492,7 +492,7 @@
                   placeholder="E-mail"
                 />
               </form>
-              <button class="button button-icon">
+              <button class="submit button-icon">
                 Подписаться
                 <svg class="icon-plane">
                   <use href="./images/sprite.svg#icon-plane"></use>
@@ -512,49 +512,50 @@
               <use href="./images/sprite-modal.svg#icon-close-modal"></use>
             </svg>
           </button>
-          <form class="form">
+          <form class="form js-speaker-form">
             <div class="form-field">
-              <h2 class="form-title">
+              <b class="form-title">
                 Оставьте свои данные, мы вам перезвоним
-              </h2>
-              <label class="label-form" for="name">Имя</label>
+              </b>
+              <label class="form-label" for="name">Имя</label>
               <input
                 required
-                class="placeholder"
+                class="form-input"
                 type="text"
                 name="name"
                 id="name"
-                placeholder="Имя"
+                placeholder=""
               />
             </div>
             <div class="form-field">
-              <label class="label-form" for="phone">Телефон</label>
+              <label class="form-label" for="phone">Телефон</label>
               <input
                 required
-                class="placeholder"
+                class="form-input"
                 type="tel"
                 name="phone"
                 id="phone"
-                placeholder="Телефон"
+                placeholder=""
               />
             </div>
             <div class="form-field">
-              <label class="label-form" for="email">Почта</label>
+              <label class="form-label" for="email">Почта</label>
               <input
                 required
-                class="placeholder"
+                class="form-input"
                 type="email"
                 name="email"
                 id="email"
-                placeholder="Почта"
+                placeholder=""
               />
             </div>
             <div class="form-field">
+              <label class="form-label" for="comment">Коментарий</label>
               <textarea
-                class="textarea placeholder"
+                class="comment form-input"
                 name="comment"
                 id="comment"
-                placeholder="Комментарий"
+                placeholder=""
               ></textarea>
             </div>
             <div class="conteiner-checkbox">
@@ -591,6 +592,23 @@
 
       document.body.style.paddingTop = `${pageHeaderHeight}px`;
     </script>
+
+    <script>
+      (() => {
+        document
+          .querySelector('.js-speaker-form')
+          .addEventListener('submit', e => {
+            e.preventDefault();
+
+            new FormData(e.currentTarget).forEach((value, name) =>
+              console.log(`${name}: ${value}`),
+            );
+
+            e.currentTarget.reset();
+          });
+      })();
+    </script>
+
     <script src="./js/modal.js"></script>
   </body>
 </html>

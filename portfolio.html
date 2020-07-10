@@ -53,23 +53,55 @@
       <section class="section">
         <div class="conteiner">
           <h1 class="visually-hidden">Наши работы</h1>
-          <ul class="filter list">
-            <li class="item">
-              <button type="button" class="radio-btn">Все</button>
-            </li>
-            <li class="item">
-              <button type="button" class="radio-btn">Веб-сайты</button>
-            </li>
-            <li class="item">
-              <button type="button" class="radio-btn">Приложения</button>
-            </li>
-            <li class="item">
-              <button type="button" class="radio-btn">Дизайн</button>
-            </li>
-            <li class="item">
-              <button type="button" class="radio-btn">Маркетинг</button>
-            </li>
-          </ul>
+          <div role="radio-group">
+            <ul class="filter list">
+              <li class="item">
+                <input
+                  type="radio"
+                  name="radio-btn"
+                  value="radio-btn"
+                  id="radio"
+                />
+                <label for="radio" class="radio-btn">Всё</label>
+              </li>
+              <li class="item">
+                <input
+                  type="radio"
+                  name="radio-btn"
+                  value="radio-btn"
+                  id="radio1"
+                />
+                <label for="radio1" class="radio-btn">Веб-сайты</label>
+              </li>
+              <li class="item">
+                <input
+                  type="radio"
+                  name="radio-btn"
+                  value="radio-btn"
+                  id="radio2"
+                />
+                <label for="radio2" class="radio-btn">Приложения</label>
+              </li>
+              <li class="item">
+                <input
+                  type="radio"
+                  name="radio-btn"
+                  value="radio-btn"
+                  id="radio3"
+                />
+                <label for="radio3" class="radio-btn">Дизайн</label>
+              </li>
+              <li class="item">
+                <input
+                  type="radio"
+                  name="radio-btn"
+                  value="radio-btn"
+                  id="radio4"
+                />
+                <label for="radio4" class="radio-btn">Маркетинг</label>
+              </li>
+            </ul>
+          </div>
           <!-- Наши работы -->
           <ul class="list portfolio">
             <li class="card">
@@ -372,5 +404,12 @@
           <p class="copy">2020 | Developed by GoIT Students</p> -->
       </div>
     </footer>
+    <script>
+      const { height: pageHeaderHeight } = document
+        .querySelector('.page-header')
+        .getBoundingClientRect();
+
+      document.body.style.paddingTop = `${pageHeaderHeight}px`;
+    </script>
   </body>
 </html>
