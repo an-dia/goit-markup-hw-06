@@ -509,75 +509,83 @@
         <div class="modal">
           <button data-modal-close class="close-modal" type="button">
             <svg class="icon-close-modal">
-              <use href="./images/sprite-modal.svg#icon-close-modal"></use>
+              <use href="./images/sprite.svg#icon-close-modal"></use>
             </svg>
           </button>
           <form class="form js-speaker-form">
-            <div class="form-field">
-              <b class="form-title">
-                Оставьте свои данные, мы вам перезвоним
-              </b>
-              <label class="form-label" for="name">Имя</label>
+            <b class="form-title">
+              Оставьте свои данные, мы вам перезвоним
+            </b>
+            <label class="form-field">
               <input
                 required
                 class="form-input"
                 type="text"
                 name="name"
-                id="name"
-                placeholder=""
+                placeholder=" "
               />
-            </div>
-            <div class="form-field">
-              <label class="form-label" for="phone">Телефон</label>
+              <svg class="icon-modal">
+                <use href="./images/sprite.svg#icon-person-modal"></use>
+              </svg>
+              <span class="form-label">Имя</span>
+            </label>
+            <label class="form-field">
               <input
                 required
                 class="form-input"
                 type="tel"
                 name="phone"
-                id="phone"
-                placeholder=""
+                placeholder=" "
               />
-            </div>
-            <div class="form-field">
-              <label class="form-label" for="email">Почта</label>
+              <svg class="icon-modal">
+                <use href="./images/sprite.svg#icon-phone-modal"></use>
+              </svg>
+              <span class="form-label">Телефон</span>
+            </label>
+            <label class="form-field">
               <input
                 required
                 class="form-input"
                 type="email"
                 name="email"
-                id="email"
-                placeholder=""
+                placeholder=" "
               />
-            </div>
-            <div class="form-field">
-              <label class="form-label" for="comment">Коментарий</label>
+              <svg class="icon-modal">
+                <use href="./images/sprite.svg#icon-email-modal"></use>
+              </svg>
+              <span class="form-label">Почта</span>
+            </label>
+            <label class="form-field textarea">
               <textarea
-                class="comment form-input"
+                class="comment"
                 name="comment"
-                id="comment"
-                placeholder=""
+                placeholder=" "
               ></textarea>
-            </div>
-            <div class="conteiner-checkbox">
+              <span class="form-comment">Комментарий</span>
+            </label>
+            <label class="conteiner-checkbox">
               <input
+                class="modal-checkbox"
                 required
                 type="checkbox"
                 name="terms-of-use"
                 value="terms-of-use"
-                id="terms-of-use"
               />
-              <label class="terms-of-use" for="terms-of-use"
-                >Соглашаюсь с рассылкой и принимаю
+              <svg class="icon-check">
+                <use href="./images/sprite.svg#icon-icon-check"></use>
+              </svg>
+              <span class="terms-of-use">
+                Соглашаюсь с рассылкой и принимаю
                 <a
                   class="terms-of-use link-use"
                   href=""
                   aria-label="Условия договора "
                   >Условия договора</a
-                ></label
-              >
-            </div>
+                >
+              </span>
+            </label>
             <div class="conteiner-submit">
-              <button class="submit" type="submit">
+              <button class="submit-modal" type="submit">
                 Отправить
               </button>
             </div>
