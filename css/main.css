@@ -812,7 +812,7 @@ body {
 }
 
 .form-field:focus-within .form-label,
-.form-input:not(:placeholder-shown) + .form-label {
+.form-input:not(:placeholder-shown) ~ .form-label {
   color: var(--accent-color);
   transform: translate(-27px, -40px) scale(0.86);
 }
@@ -861,21 +861,21 @@ body {
 }
 
 .conteiner-checkbox:focus-within .icon-check {
-  border: 2px solid #212121;
+  outline: 1px solid var(--accent-color);
 }
 
 .icon-check {
   margin-right: 7px;
   width: 18px;
   height: 18px;
-  border: 1px solid #212121;
+  /* background-image: url(../images/no-check.svg); */
   border-radius: 2px;
 
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-checkbox:checked + .icon-check {
-  border-color: var(--accent-color);
+  fill: var(--accent-color);
   background-color: var(--accent-color);
   background-image: url(../images/icon-check.svg);
   background-size: contain;
