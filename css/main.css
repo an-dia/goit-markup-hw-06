@@ -799,7 +799,7 @@ body {
   transform: translatey(-50%);
   margin-bottom: 4px;
 
-  transition: 250ms var(--timing-function-bezier);
+  transition: var(--timing-function-bezier);
 }
 
 .textarea .comment {
